@@ -28,6 +28,8 @@ exploring the data, and getting acquainted with the 3 tables. */
 Please list the names of the facilities that do. */
 
 
+
+
 /* Q2: How many facilities do not charge a fee to members? */
 
 
