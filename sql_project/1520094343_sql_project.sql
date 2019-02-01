@@ -124,7 +124,7 @@ ORDER BY cost DESC;
 
 SELECT * 
 FROM (
-	SELECT Facilities.name AS facility, CONCAT( Members.firstname,  ' ', 		Members.surname ) AS name, 
+	SELECT Facilities.name AS facility, CONCAT( Members.firstname,  ' ', Members.surname ) AS name, 
 		CASE WHEN Bookings.memid =0
 			THEN Facilities.guestcost * Bookings.slots
 			ELSE Facilities.membercost * Bookings.slots
