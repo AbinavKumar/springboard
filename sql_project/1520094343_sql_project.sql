@@ -29,38 +29,17 @@ SELECT name
 FROM Facilities 
 WHERE membercost > 0;
 
-Tennis Court 1
-Tennis Court 2
-Massage Room 1
-Massage Room 2
-Squash Court
-
 /* Q2: How many facilities do not charge a fee to members? */
 
 SELECT COUNT(name)
 FROM Facilities 
 WHERE membercost = 0;
 
-4 facilities do not charge a fee to members
-
 /* Q3: How can you produce a list of facilities that charge a fee to members, where the fee is less than 20% of the facility's monthly maintenance cost? Return the facid, facility name, member cost, and monthly maintenance of the facilities in question. */
 
 SELECT name, facid, membercost, monthlymaintenance
 FROM Facilities
 WHERE membercost/monthlymaintenance < .2;
-
-
-name		facid	membercost	monthlymaintenance	
-Tennis Court 1	0	5.0		200
-Tennis Court 2	1	5.0		200
-Badminton Court	2	0.0		50
-Table Tennis	3	0.0		10
-Massage Room 1	4	9.9		3000
-Massage Room 2	5	9.9		3000
-Squash Court	6	3.5		80
-Snooker Table	7	0.0		15
-Pool Table	8	0.0		15
-
 
 /* Q4: How can you retrieve the details of facilities with ID 1 and 5?
 Write the query without using the OR operator. */
